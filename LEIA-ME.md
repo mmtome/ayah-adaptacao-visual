@@ -34,6 +34,45 @@ Tudo dentro de `index.html`:
 Atributos que ligam as animações no HTML: `data-split`, `data-reveal`,
 `data-magnet`, `data-lift`, `data-parallax` + `data-speed`.
 
+## Responsividade
+
+As seções usam containers de **até 1280px** (`.ayah-wrap`) com padding
+`clamp(20px,3.8vw,44px)`. Os estilos da página são inline, então as regras
+responsivas ficam no `<style>` do `<helmet>` e usam `!important` para
+conseguir sobrescrever. Os ganchos são:
+
+| Classe | Onde |
+|---|---|
+| `.ayah-wrap` | todos os containers centrais das seções |
+| `.ayah-hero-grid` | grid de duas colunas do herói |
+| `.ayah-hero-copy` | coluna de texto do herói |
+| `.ayah-hero-media` | coluna da foto |
+| `.ayah-hero-img` | a foto recortada |
+| `.ayah-hero-badge` | selo “duas médicas na mesma consulta” |
+| `.ayah-nav` / `.ayah-nav-links` | topo |
+
+Pontos de quebra:
+
+- **≤ 1120px** — o herói vira uma coluna só e a foto centraliza abaixo do texto.
+  Acima disso a foto ficava por cima do título e do CRM.
+- **≤ 620px** — nav e selo encolhem.
+- **≤ 400px** — padding lateral cai para 16px.
+- `prefers-reduced-motion` desliga as animações.
+
+Os demais grids já são `repeat(auto-fit,minmax(...,1fr))` e se reorganizam
+sozinhos — mexer no `minmax` muda quantas colunas cabem.
+
+## A foto do herói
+
+`assets/medicas-hero.png` foi recortada sobre fundo branco e trazia franja
+clara nas bordas. O arquivo publicado já está tratado: a cor foi reconstruída
+sem o branco e o contorno assume o verde do fundo (`#0A2420`), de modo que a
+borda se dissolve na cena em vez de virar halo branco ou contorno preto. O
+original intocado está em `../medicas-hero-ORIGINAL-backup.png`.
+
+Se trocar essa foto, o recorte novo precisa do mesmo tratamento — senão a
+franja branca volta.
+
 ## Antes de publicar
 
 - Trocar `https://wa.me/5500000000000` pelo número real (aparece 5x).
