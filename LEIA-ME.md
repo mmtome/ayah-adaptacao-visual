@@ -1,0 +1,56 @@
+# Protocolo RAINHA — Ayah Integrative
+
+## Como rodar no VS Code
+
+1. Abra esta pasta no VS Code (`File > Open Folder`).
+2. Instale a extensão **Live Server** (Ritwick Dey).
+3. Clique com o botão direito em `index.html` → **Open with Live Server**.
+
+Abrir o `index.html` com duplo clique (`file://`) também funciona na maioria dos navegadores, mas o Live Server é mais confiável e recarrega ao salvar.
+
+## Estrutura
+
+```
+index.html      → a página inteira (markup + lógica de animação)
+support.js      → runtime que monta o componente (não editar)
+assets/         → imagens
+```
+
+## Onde editar
+
+Tudo dentro de `index.html`:
+
+- **`<helmet>`** (topo): fontes do Google, reset e `@keyframes` das animações
+  (`ayahMarq`, `ayahSpin`, `ayahFloatA/B`, `ayahPulse`, `ayahFade`).
+- **Markup da página**: entre `</helmet>` e `</x-dc>`. Estilos são todos inline,
+  então cada seção é autocontida — copiar/colar uma seção funciona.
+- **`class Component extends DCLogic`** (perto do fim do arquivo):
+  - `faqData` → perguntas e respostas do FAQ
+  - `renderVals()` → link do WhatsApp (`whatsapp`) e flag `mostrarPrints`
+  - `componentDidMount()` → animações: `splitHeadings` (títulos por palavra),
+    `installReveal` (entrada por scroll), `installMagnet` (botões magnéticos),
+    `installLift` (hover dos cards), `installParallax`, `installProgress`.
+
+Atributos que ligam as animações no HTML: `data-split`, `data-reveal`,
+`data-magnet`, `data-lift`, `data-parallax` + `data-speed`.
+
+## Antes de publicar
+
+- Trocar `https://wa.me/5500000000000` pelo número real (aparece 5x).
+- Substituir os placeholders listrados (`foto · ...`, `print do depoimento ...`)
+  por imagens reais em `assets/`.
+- Conferir os CRMs e o aviso legal do rodapé.
+
+## Paleta
+
+| Uso | Hex |
+|---|---|
+| Verde profundo (fundo) | `#031A17` / `#012C28` |
+| Cards escuros | `#16352F` / `#08201C` |
+| Sálvia | `#70A98C` |
+| Sálvia clara | `#A9C7B6` |
+| Dourado | `#EEBD2B` |
+| Areia / off-white | `#F6F1EE` |
+
+Tipografia: **Bodoni Moda** (títulos), **IBM Plex Sans** (texto),
+**IBM Plex Mono** (etiquetas em caixa alta).
