@@ -62,6 +62,25 @@ Pontos de quebra:
 Os demais grids já são `repeat(auto-fit,minmax(...,1fr))` e se reorganizam
 sozinhos — mexer no `minmax` muda quantas colunas cabem.
 
+## Tamanho e altura da foto do herói
+
+Três valores governam a foto, todos no `<img class="ayah-hero-img">`:
+
+- `--hero-hang` (no `<style>`, em `.ayah-hero-media`) — quanto a foto desce
+  além da base do header. A foto **e** o degradê do chão usam essa variável,
+  então mexer nela move os dois juntos. Maior = foto mais baixa.
+- `height: min(calc(50vw + 60px), 870px, clamp(470px,95vh,980px))` — a largura
+  da foto cresce junto com a altura, e o container trava em 1280px; por isso o
+  teto horizontal **não** é proporcional à tela. `50vw + 60px` é o limite que
+  mantém a foto fora do “RAINHA”, e `870px` é o teto acima de ~1600px.
+  Aumentar esses números faz a foto invadir o título.
+- `right: clamp(-200px, calc(596px - 50vw), -44px)` — encosta a foto na borda
+  direita da janela entre 1280px e 1600px e para de empurrar acima disso, para
+  ela não se desgrudar do texto em telas muito largas.
+
+A máscara lateral esquerda (`#000 9%`) dissolve os 9% da esquerda da foto — é
+nessa faixa que mora a sobra sobre a cauda do “A” de RAINHA.
+
 ## A foto do herói
 
 `assets/medicas-hero.png` foi recortada sobre fundo branco e trazia franja

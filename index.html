@@ -29,6 +29,10 @@
 
   img, svg, video { max-width: 100%; }
 
+  /* quanto a foto do heroi desce para alem da base do header.
+     Foto e degrade do chao usam o mesmo valor. */
+  .ayah-hero-media { --hero-hang: clamp(30px, 4vw, 70px); }
+
   /* ===== responsivo =====================================================
      Os estilos da pagina sao inline, entao estas regras usam !important
      para conseguir sobrescrever. Ganchos: .ayah-wrap (containers),
@@ -41,7 +45,7 @@
                       margin-top: clamp(32px, 6vw, 56px) !important; }
     .ayah-hero-copy { max-width: 62ch; }
     /* a caixa da foto tem exatamente a altura visivel dela, sem vao sobrando */
-    .ayah-hero-media { min-height: calc(clamp(360px, 62vw, 660px) - clamp(60px, 8vw, 110px)) !important;
+    .ayah-hero-media { min-height: calc(clamp(360px, 62vw, 660px) - var(--hero-hang)) !important;
                        margin-top: clamp(8px, 3vw, 24px); }
     .ayah-hero-img { right: auto !important; left: 50% !important;
                      height: clamp(360px, 62vw, 660px) !important;
@@ -134,13 +138,13 @@
           </div>
         </div>
 
-        <div class="ayah-hero-media" data-reveal="1" style="position:relative;align-self:stretch;min-height:clamp(460px,72vh,820px)">
+        <div class="ayah-hero-media" data-reveal="1" style="position:relative;align-self:stretch;min-height:clamp(500px,82vh,900px)">
           <div style="position:absolute;right:-4%;top:32%;transform:translateY(-50%);width:min(150%,880px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(112,169,140,.30),rgba(112,169,140,.09) 50%,transparent 68%);pointer-events:none"></div>
           <div style="position:absolute;right:0;top:32%;transform:translateY(-50%);width:min(134%,780px);aspect-ratio:1;border:1px solid rgba(112,169,140,.26);border-radius:50%;pointer-events:none;animation:ayahSpin 60s linear infinite"></div>
           <div style="position:absolute;right:10%;top:32%;transform:translateY(-50%);width:min(100%,600px);aspect-ratio:1;border:1px dashed rgba(238,189,43,.20);border-radius:50%;pointer-events:none;animation:ayahSpinRev 80s linear infinite"></div>
-          <img src="assets/medicas-hero.png" alt="Dra. Bianca e Dra. Bruna Findikoglu" class="ayah-hero-img" style="position:absolute;right:clamp(-120px,-13%,-30px);bottom:calc(-1 * clamp(60px,8vw,110px));display:block;height:min(clamp(440px,80vh,840px),56vw);width:auto;max-width:none;object-fit:contain;object-position:bottom right;filter:saturate(.92) contrast(1.03) brightness(.96) drop-shadow(0 0 5px rgba(12,42,36,.95)) drop-shadow(0 0 16px rgba(46,104,86,.42)) drop-shadow(0 0 54px rgba(112,169,140,.18)) drop-shadow(0 34px 74px rgba(0,0,0,.5));-webkit-mask-image:linear-gradient(to bottom,#000 74%,rgba(0,0,0,.66) 89%,transparent 100%),linear-gradient(to right,transparent 0,rgba(0,0,0,.6) 1.5%,#000 5.5%);mask-image:linear-gradient(to bottom,#000 74%,rgba(0,0,0,.66) 89%,transparent 100%),linear-gradient(to right,transparent 0,rgba(0,0,0,.6) 1.5%,#000 5.5%);-webkit-mask-composite:source-in;mask-composite:intersect">
+          <img src="assets/medicas-hero.png" alt="Dra. Bianca e Dra. Bruna Findikoglu" class="ayah-hero-img" style="position:absolute;right:clamp(-200px,calc(596px - 50vw),-44px);bottom:calc(-1 * var(--hero-hang));display:block;height:min(calc(50vw + 60px),870px,clamp(470px,95vh,980px));width:auto;max-width:none;object-fit:contain;object-position:bottom right;filter:saturate(.92) contrast(1.03) brightness(.96) drop-shadow(0 0 5px rgba(12,42,36,.95)) drop-shadow(0 0 16px rgba(46,104,86,.42)) drop-shadow(0 0 54px rgba(112,169,140,.18)) drop-shadow(0 34px 74px rgba(0,0,0,.5));-webkit-mask-image:linear-gradient(to bottom,#000 74%,rgba(0,0,0,.66) 89%,transparent 100%),linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 3%,#000 9%);mask-image:linear-gradient(to bottom,#000 74%,rgba(0,0,0,.66) 89%,transparent 100%),linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 3%,#000 9%);-webkit-mask-composite:source-in;mask-composite:intersect">
           <div style="position:absolute;inset:-12% -12% -18%;pointer-events:none;background:radial-gradient(118% 78% at 64% 30%,rgba(112,169,140,.20),transparent 62%);mix-blend-mode:soft-light"></div>
-          <div style="position:absolute;left:-14%;right:-14%;bottom:calc(-1 * clamp(60px,8vw,110px));height:34%;pointer-events:none;background:linear-gradient(to top,#031A17 12%,rgba(3,26,23,.62) 46%,rgba(3,26,23,.22) 74%,transparent)"></div>
+          <div style="position:absolute;left:-14%;right:-14%;bottom:calc(-1 * var(--hero-hang));height:32%;pointer-events:none;background:linear-gradient(to top,#031A17 12%,rgba(3,26,23,.62) 46%,rgba(3,26,23,.22) 74%,transparent)"></div>
           <div class="ayah-hero-badge" data-parallax="1" data-speed="-0.07" style="position:absolute;right:0;bottom:14%;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:999px;background:#012C28;border:1px solid rgba(112,169,140,.28);z-index:2">
             <img src="assets/selo.png" alt="Selo Ayah" style="width:40px;height:40px;border-radius:50%;display:block">
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#B6C9C1;line-height:1.5">Duas médicas<br>na mesma consulta</span>
