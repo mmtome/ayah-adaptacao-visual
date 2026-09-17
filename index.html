@@ -31,7 +31,7 @@
 
   /* quanto a foto do heroi desce para alem da base do header.
      Foto e degrade do chao usam o mesmo valor. */
-  .ayah-hero-media { --hero-hang: clamp(30px, 4vw, 70px); }
+  .ayah-hero-media { --hero-hang: clamp(14px, 1.8vw, 32px); }
 
   /* ===== responsivo =====================================================
      Os estilos da pagina sao inline, entao estas regras usam !important
@@ -112,12 +112,7 @@
 
       <div class="ayah-hero-grid" style="display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);gap:clamp(32px,4vw,56px);align-items:center;margin-top:clamp(48px,7vw,96px)">
         <div class="ayah-hero-copy" style="position:relative;z-index:1">
-          <div data-reveal="1" style="display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid rgba(112,169,140,.30);border-radius:999px;background:rgba(112,169,140,.07)">
-            <span style="width:6px;height:6px;border-radius:50%;background:#70A98C;animation:ayahPulse 2.6s ease-in-out infinite"></span>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#B6C9C1">Endocrinologia integrativa</span>
-          </div>
-
-          <p data-reveal="1" style="margin:clamp(22px,3vw,34px) 0 0;font-family:'IBM Plex Mono',monospace;font-size:clamp(11px,1.1vw,13px);letter-spacing:.2em;text-transform:uppercase;color:#8CA39B">Protocolo de regulação hormonal</p>
+          <p data-reveal="1" style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:clamp(11px,1.1vw,13px);letter-spacing:.2em;text-transform:uppercase;color:#8CA39B">Protocolo de regulação hormonal</p>
           <h1 data-split="1" style="margin:6px 0 0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:clamp(58px,11vw,148px);line-height:.86;letter-spacing:-.03em;color:#F6F1EE">RAINHA</h1>
 
           <p data-reveal="1" style="margin:clamp(20px,2.6vw,30px) 0 0;max-width:34ch;font-size:clamp(16px,1.4vw,20px);line-height:1.62;color:#C9D6D1">Seis etapas para investigar a <span style="color:#F6F1EE">raiz do desequilíbrio</span> — escuta longa, exames aprofundados e acompanhamento contínuo.</p>
@@ -144,7 +139,7 @@
           <div style="position:absolute;right:10%;top:32%;transform:translateY(-50%);width:min(100%,600px);aspect-ratio:1;border:1px dashed rgba(238,189,43,.20);border-radius:50%;pointer-events:none;animation:ayahSpinRev 80s linear infinite"></div>
           <img src="assets/medicas-hero.png" alt="Dra. Bianca e Dra. Bruna Findikoglu" class="ayah-hero-img" style="position:absolute;right:clamp(-200px,calc(596px - 50vw),-44px);bottom:calc(-1 * var(--hero-hang));display:block;height:min(calc(50vw + 60px),870px,clamp(470px,95vh,980px));width:auto;max-width:none;object-fit:contain;object-position:bottom right;filter:saturate(.92) contrast(1.03) brightness(.96) drop-shadow(0 0 5px rgba(12,42,36,.95)) drop-shadow(0 0 16px rgba(46,104,86,.42)) drop-shadow(0 0 54px rgba(112,169,140,.18)) drop-shadow(0 34px 74px rgba(0,0,0,.5));-webkit-mask-image:linear-gradient(to bottom,#000 74%,rgba(0,0,0,.66) 89%,transparent 100%),linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 3%,#000 9%);mask-image:linear-gradient(to bottom,#000 74%,rgba(0,0,0,.66) 89%,transparent 100%),linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 3%,#000 9%);-webkit-mask-composite:source-in;mask-composite:intersect">
           <div style="position:absolute;inset:-12% -12% -18%;pointer-events:none;background:radial-gradient(118% 78% at 64% 30%,rgba(112,169,140,.20),transparent 62%);mix-blend-mode:soft-light"></div>
-          <div style="position:absolute;left:-14%;right:-14%;bottom:calc(-1 * var(--hero-hang));height:32%;pointer-events:none;background:linear-gradient(to top,#031A17 12%,rgba(3,26,23,.62) 46%,rgba(3,26,23,.22) 74%,transparent)"></div>
+          <div style="position:absolute;left:-100vw;right:-100vw;bottom:calc(-1 * var(--hero-hang));height:32%;pointer-events:none;background:linear-gradient(to top,#031A17 12%,rgba(3,26,23,.62) 46%,rgba(3,26,23,.22) 74%,transparent)"></div>
           <div class="ayah-hero-badge" data-parallax="1" data-speed="-0.07" style="position:absolute;right:0;bottom:14%;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:999px;background:#012C28;border:1px solid rgba(112,169,140,.28);z-index:2">
             <img src="assets/selo.png" alt="Selo Ayah" style="width:40px;height:40px;border-radius:50%;display:block">
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#B6C9C1;line-height:1.5">Duas médicas<br>na mesma consulta</span>
@@ -220,9 +215,7 @@
         <div style="position:absolute;top:-3px;left:14%;right:14%;height:4px;border-radius:999px;background:linear-gradient(90deg,#40775C,#70A98C,#EEBD2B)"></div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(30px,4vw,56px);align-items:center">
           <div data-tilt="1" style="position:relative;padding:14px 14px 42px;background:#F6F1EE;border-radius:4px;transform:rotate(-2.4deg);box-shadow:0 28px 60px -34px rgba(0,0,0,.8)">
-            <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);display:grid;place-items:center;text-align:center;padding:18px">
-              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6B7C74;line-height:1.7">foto da clínica<br>consulta em andamento</span>
-            </div>
+            <div style="aspect-ratio:4/3;overflow:hidden"><img src="assets/stock/clinica-consulta.jpg" alt="Consultório da Ayah Integrative" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <span style="position:absolute;bottom:14px;left:16px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74">Ayah Integrative · consultório</span>
           </div>
           <div>
@@ -252,16 +245,10 @@
       <p data-reveal="1" style="margin:0 auto;max-width:78ch;text-align:center;font-size:15.5px;line-height:1.8;color:#A8BCB4">O <span style="color:#F6F1EE">Protocolo RAINHA</span> é a jornada de regulação hormonal feminina conduzida pela <span style="color:#F6F1EE">Dra. Bianca</span> e pela <span style="color:#F6F1EE">Dra. Bruna Findikoglu</span>, médicas pós-graduadas em endocrinologia. Seis etapas que unem diagnóstico aprofundado, medicação individualizada, bioimpedância e escuta — do primeiro exame ao acompanhamento de longo prazo.</p>
 
       <div style="margin-top:clamp(34px,4.5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2px;border-radius:16px;overflow:hidden;border:1px solid rgba(112,169,140,.18)">
-        <div data-reveal="1" style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center;text-align:center;padding:16px">
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C;line-height:1.8">foto<br>recepção</span>
-        </div>
+        <div data-reveal="1" style="aspect-ratio:3/4;overflow:hidden"><img src="assets/stock/recepcao.jpg" alt="Recepção da clínica" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         <div data-reveal="1" style="aspect-ratio:3/4;overflow:hidden"><img src="assets/medicas.jpg" alt="Dra. Bianca e Dra. Bruna" style="width:100%;height:100%;object-fit:cover;object-position:30% 30%"></div>
-        <div data-reveal="1" style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center;text-align:center;padding:16px">
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C;line-height:1.8">foto<br>bioimpedância</span>
-        </div>
-        <div data-reveal="1" style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center;text-align:center;padding:16px">
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C;line-height:1.8">foto<br>atendimento</span>
-        </div>
+        <div data-reveal="1" style="aspect-ratio:3/4;overflow:hidden"><img src="assets/stock/bioimpedancia.jpg" alt="Avaliação de composição corporal" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div data-reveal="1" style="aspect-ratio:3/4;overflow:hidden"><img src="assets/stock/atendimento.jpg" alt="Atendimento médico" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       </div>
     </div>
   </section>
@@ -276,9 +263,7 @@
 
       <div style="margin-top:clamp(34px,4.5vw,62px);display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(16px,2vw,24px)">
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:16px;border:1px solid rgba(112,169,140,.20);background:#16352F;padding:18px 18px 26px">
-          <div style="border-radius:10px;overflow:hidden;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#1A3B33 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">foto · anamnese</span>
-          </div>
+          <div style="border-radius:10px;overflow:hidden;aspect-ratio:16/10;overflow:hidden"><img src="assets/stock/etapa-anamnese.jpg" alt="Consulta de anamnese" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:7px 13px;border-radius:999px;background:rgba(112,169,140,.14);border:1px solid rgba(112,169,140,.28)">
             <span style="width:5px;height:5px;border-radius:50%;background:#EEBD2B"></span>
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#CBDBD3">Tempo 1 · 1º mês</span>
@@ -287,9 +272,7 @@
           <p style="margin:10px 0 0;font-size:14.5px;line-height:1.65;color:#B3C6BE">Consulta longa, histórico completo, painel de exames aprofundado e bioimpedância. Saímos daqui com <span style="color:#EFE8E3">a causa nomeada</span>, não com um palpite.</p>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:16px;border:1px solid rgba(112,169,140,.20);background:#16352F;padding:18px 18px 26px">
-          <div style="border-radius:10px;overflow:hidden;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#1A3B33 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">foto · retorno clínico</span>
-          </div>
+          <div style="border-radius:10px;overflow:hidden;aspect-ratio:16/10;overflow:hidden"><img src="assets/stock/etapa-retorno.jpg" alt="Retorno clínico com leitura de exames" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:7px 13px;border-radius:999px;background:rgba(112,169,140,.14);border:1px solid rgba(112,169,140,.28)">
             <span style="width:5px;height:5px;border-radius:50%;background:#EEBD2B"></span>
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#CBDBD3">Tempo 2 · 3 meses</span>
@@ -298,9 +281,7 @@
           <p style="margin:10px 0 0;font-size:14.5px;line-height:1.65;color:#B3C6BE">Protocolo individualizado por escrito, <span style="color:#EFE8E3">medicação personalizada</span> e ajuste de dose a cada retorno — com leitura objetiva do que mudou no exame e no corpo.</p>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:16px;border:1px solid rgba(112,169,140,.20);background:#16352F;padding:18px 18px 26px">
-          <div style="border-radius:10px;overflow:hidden;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#1A3B33 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">foto · acompanhamento</span>
-          </div>
+          <div style="border-radius:10px;overflow:hidden;aspect-ratio:16/10;overflow:hidden"><img src="assets/stock/etapa-acompanhamento.jpg" alt="Acompanhamento contínuo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:7px 13px;border-radius:999px;background:rgba(112,169,140,.14);border:1px solid rgba(112,169,140,.28)">
             <span style="width:5px;height:5px;border-radius:50%;background:#EEBD2B"></span>
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#CBDBD3">Tempo 3 · 12 meses</span>
@@ -450,72 +431,56 @@
       </div>
       <div style="margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(14px,1.6vw,20px)">
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-tireoide.jpg" alt="Tireoide" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Tireoide</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">Do TSH ao anticorpo: a leitura completa do eixo que comanda energia e metabolismo.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-insulina.jpg" alt="Insulina e metabolismo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Insulina e metabolismo</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">Resistência insulínica, glicemia e o motivo real da balança não se mover.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-hormonios.jpg" alt="Hormônios sexuais" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Hormônios sexuais</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">Estrogênio, progesterona e testosterona lidos junto com o seu ciclo e a sua fase.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-cortisol.jpg" alt="Cortisol e estresse" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Cortisol e estresse</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">O eixo que sustenta — ou sabota — sono, humor e gordura abdominal.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-composicao.jpg" alt="Composição corporal" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Composição corporal</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">Bioimpedância a cada etapa: massa magra, gordura e água em números comparáveis.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-vitaminas.jpg" alt="Vitaminas e minerais" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Vitaminas e minerais</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">Ferro, vitamina D, B12 e o que a carência silenciosa faz com a sua energia.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-sono.jpg" alt="Sono e ritmo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Sono e ritmo</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">Melatonina, rotina e o ciclo que precisa voltar a restaurar de verdade.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
-          <div style="flex:1;min-height:150px;background:repeating-linear-gradient(135deg,#0F2724 0 9px,#16352F 9px 18px);display:grid;place-items:center">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7E948C">imagem clínica</span>
-          </div>
+          <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-intestino.jpg" alt="Saúde intestinal" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Saúde intestinal</h3>
             <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">Absorção, inflamação e a conversa entre intestino e hormônio.</p>
@@ -563,18 +528,18 @@
         <p style="margin:0 0 24px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#6B7C74">Depoimentos recebidos no direct</p>
         <div style="display:flex;width:max-content;gap:16px;animation:ayahMarq 58s linear infinite">
           <div style="display:flex;gap:16px">
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 01</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 02</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 03</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 04</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 05</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-01.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-02.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-03.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-04.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-05.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
           </div>
           <div style="display:flex;gap:16px">
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 01</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 02</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 03</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 04</span></div>
-            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;background:repeating-linear-gradient(135deg,#E3DBD5 0 9px,#EFE8E3 9px 18px);border:1px solid #D8D0CA;display:grid;place-items:center;text-align:center;padding:18px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6B7C74;line-height:1.8">print do<br>depoimento 05</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-01.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-02.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-03.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-04.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
+            <div style="width:250px;aspect-ratio:9/16;border-radius:14px;border:1px solid #D8D0CA;overflow:hidden;position:relative"><img src="assets/stock/dep-05.jpg" alt="Foto de exemplo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;padding:4px 9px;border-radius:999px;background:rgba(3,26,23,.72);color:#EFE8E3;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase">Exemplo</span></div>
           </div>
         </div>
       </div>

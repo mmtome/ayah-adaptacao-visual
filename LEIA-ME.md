@@ -92,6 +92,33 @@ original intocado está em `../medicas-hero-ORIGINAL-backup.png`.
 Se trocar essa foto, o recorte novo precisa do mesmo tratamento — senão a
 franja branca volta.
 
+## Imagens de exemplo (`assets/stock/`)
+
+Os placeholders listrados foram preenchidos com fotos do **Unsplash** (licença
+livre, sem exigência de atribuição) só para o site não ficar vazio na adaptação
+visual. **Todas devem ser trocadas por fotos reais da clínica antes de ir para o
+ar de verdade.** Cada uma tem `loading="lazy"`.
+
+| Arquivo | Onde aparece |
+|---|---|
+| `clinica-consulta.jpg` | polaroid “Ayah Integrative · consultório” |
+| `recepcao.jpg` `bioimpedancia.jpg` `atendimento.jpg` | tira de 4 fotos (a 2ª é a foto real das médicas) |
+| `etapa-anamnese.jpg` `etapa-retorno.jpg` `etapa-acompanhamento.jpg` | a jornada em três tempos |
+| `inv-*.jpg` (8) | cards de “O que investigamos” |
+| `dep-01..05.jpg` | carrossel de depoimentos |
+
+Para trocar, basta substituir o arquivo mantendo o nome — nada no HTML precisa
+mudar. Proporções usadas: 4/3, 3/4, 16/10, ~4/3 nos cards e 9/16 nos depoimentos.
+
+### Os depoimentos levam um selo “EXEMPLO”
+
+O bloco se chama *“Depoimentos recebidos no direct”*. Como as fotos ali são de
+banco de imagens e não prints de pacientes reais, cada card carrega um selo
+**EXEMPLO** no canto — para ninguém ler aquilo como depoimento verdadeiro
+enquanto o site está em adaptação. Ao colocar os prints reais, remova o
+`<span>` do selo. Os 5 cards aparecem duas vezes porque o carrossel duplica o
+bloco para o loop ficar contínuo: as duas voltas têm de usar as mesmas imagens.
+
 ## Antes de publicar
 
 - Trocar `https://wa.me/5500000000000` pelo número real (aparece 5x).
