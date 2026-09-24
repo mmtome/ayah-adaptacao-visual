@@ -31,7 +31,7 @@
 
   img, svg, video { max-width: 100%; }
 
-  /* GradualBlur — camadas empilhadas de backdrop-filter com mascara */
+  /* GradualBlur: camadas empilhadas de backdrop-filter com mascara */
   .gradual-blur { isolation: isolate; pointer-events: none; }
   .gradual-blur-inner { position: relative; width: 100%; height: 100%; pointer-events: none; }
   .gradual-blur-inner > div { position: absolute; inset: 0; }
@@ -97,7 +97,7 @@
 
 <div data-grain="1" style="position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.05;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.85%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22120%22 height=%22120%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div>
 
-<!-- GradualBlur (React Bits) — faixa fixa na base da janela -->
+<!-- GradualBlur (React Bits): faixa fixa na base da janela -->
 <div data-gradual-blur="bottom" data-target="page" data-height="clamp(72px,9vh,130px)"
      data-strength="2.6" data-divs="6" data-curve="bezier" data-exponential="1" data-z="75"></div>
 
@@ -129,7 +129,7 @@
           <p data-reveal="1" style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:clamp(11px,1.1vw,13px);letter-spacing:.2em;text-transform:uppercase;color:#8CA39B">Protocolo de regulação hormonal</p>
           <h1 data-split="1" style="margin:6px 0 0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:clamp(58px,11vw,148px);line-height:.86;letter-spacing:-.03em;color:#F6F1EE">RAINHA</h1>
 
-          <p data-reveal="1" style="margin:clamp(20px,2.6vw,30px) 0 0;max-width:34ch;font-size:clamp(16px,1.4vw,20px);line-height:1.62;color:#C9D6D1">Seis etapas para investigar a <span style="color:#F6F1EE">raiz do desequilíbrio</span> — escuta longa, exames aprofundados e acompanhamento contínuo.</p>
+          <p data-reveal="1" style="margin:clamp(20px,2.6vw,30px) 0 0;max-width:34ch;font-size:clamp(16px,1.4vw,20px);line-height:1.62;color:#C9D6D1">Seis etapas para investigar a <span style="color:#F6F1EE">raiz do desequilíbrio</span>: escuta longa, exames aprofundados e acompanhamento contínuo.</p>
           <p data-reveal="1" style="margin:14px 0 0;font-size:14.5px;font-weight:400;color:#93A9A2">Dra. Bianca CRM 215813 · Dra. Bruna Findikoglu CRM 215815</p>
 
           <div data-reveal="1" style="margin-top:clamp(28px,3.4vw,40px);display:flex;flex-wrap:wrap;gap:14px;align-items:center">
@@ -201,7 +201,7 @@
         </div>
         <div data-reveal="1" data-lift="1" style="display:flex;gap:16px;align-items:flex-start;padding:22px 24px;border-radius:12px;background:#16352F;border:1px solid rgba(112,169,140,.18)">
           <span style="flex:none;margin-top:2px;width:22px;height:22px;border-radius:6px;border:1px solid rgba(112,169,140,.45);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#70A98C">02</span>
-          <p style="margin:0;font-size:15.5px;font-weight:400;line-height:1.55;color:#E3EAE6">O peso que sobe sem nenhuma mudança na rotina — e não desce com dieta alguma.</p>
+          <p style="margin:0;font-size:15.5px;font-weight:400;line-height:1.55;color:#E3EAE6">O peso que sobe sem nenhuma mudança na rotina, e não desce com dieta alguma.</p>
         </div>
         <div data-reveal="1" data-lift="1" style="display:flex;gap:16px;align-items:flex-start;padding:22px 24px;border-radius:12px;background:#16352F;border:1px solid rgba(112,169,140,.18)">
           <span style="flex:none;margin-top:2px;width:22px;height:22px;border-radius:6px;border:1px solid rgba(112,169,140,.45);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#70A98C">03</span>
@@ -235,7 +235,7 @@
           <div>
             <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#70A98C">Por que criamos o protocolo</p>
             <h3 data-split="1" style="margin:14px 0 0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:clamp(24px,3vw,38px);line-height:1.12;color:#F6F1EE">Quando a consulta dura dez minutos, sobra sintoma e falta causa.</h3>
-            <p data-reveal="1" style="margin:22px 0 0;font-size:16px;line-height:1.75;color:#BACAC3">Atendemos juntas, a quatro mãos, porque regulação hormonal não caber em um bloco de receita. Antes de qualquer tratamento vem a leitura completa: histórico, sintoma, exame, composição corporal e rotina real — a sua, não a de um protocolo genérico.</p>
+            <p data-reveal="1" style="margin:22px 0 0;font-size:16px;line-height:1.75;color:#BACAC3">Atendemos juntas, a quatro mãos, porque regulação hormonal não caber em um bloco de receita. Antes de qualquer tratamento vem a leitura completa: histórico, sintoma, exame, composição corporal e rotina real: a sua, não a de um protocolo genérico.</p>
             <p data-reveal="1" style="margin:16px 0 0;font-size:16px;line-height:1.75;color:#BACAC3">É isso que o <span style="color:#F6F1EE;font-weight:400">Protocolo RAINHA</span> organiza em seis etapas: investigar a raiz, ajustar com método e acompanhar o tempo necessário para o corpo responder.</p>
             <div data-reveal="1" style="margin-top:30px">
               <a href="{{ whatsapp }}" data-magnet="1" style="display:inline-flex;align-items:center;gap:4px;padding:7px;border:1px solid rgba(112,169,140,.28);border-radius:999px;background:rgba(246,241,238,.06);text-decoration:none">
@@ -253,10 +253,10 @@
     <div class="ayah-wrap" style="width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(20px,3.8vw,44px)">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(28px,4vw,60px);align-items:start">
         <h2 data-split="1" style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:clamp(30px,4.6vw,58px);line-height:1.02;letter-spacing:-.02em;color:#F6F1EE">O QUE É O<br>PROTOCOLO RAINHA</h2>
-        <p data-reveal="1" style="margin:0;font-size:clamp(16px,1.4vw,19px);line-height:1.68;color:#C9D6D1">O programa de regulação hormonal da Ayah: investigação profunda, tratamento individualizado e acompanhamento contínuo — para retomar o controle do corpo com método, não com promessa.</p>
+        <p data-reveal="1" style="margin:0;font-size:clamp(16px,1.4vw,19px);line-height:1.68;color:#C9D6D1">O programa de regulação hormonal da Ayah: investigação profunda, tratamento individualizado e acompanhamento contínuo, para retomar o controle do corpo com método, não com promessa.</p>
       </div>
       <div style="height:1px;background:rgba(112,169,140,.18);margin:clamp(34px,4vw,56px) 0"></div>
-      <p data-reveal="1" style="margin:0 auto;max-width:78ch;text-align:center;font-size:15.5px;line-height:1.8;color:#A8BCB4">O <span style="color:#F6F1EE">Protocolo RAINHA</span> é a jornada de regulação hormonal feminina conduzida pela <span style="color:#F6F1EE">Dra. Bianca</span> e pela <span style="color:#F6F1EE">Dra. Bruna Findikoglu</span>, médicas pós-graduadas em endocrinologia. Seis etapas que unem diagnóstico aprofundado, medicação individualizada, bioimpedância e escuta — do primeiro exame ao acompanhamento de longo prazo.</p>
+      <p data-reveal="1" style="margin:0 auto;max-width:78ch;text-align:center;font-size:15.5px;line-height:1.8;color:#A8BCB4">O <span style="color:#F6F1EE">Protocolo RAINHA</span> é a jornada de regulação hormonal feminina conduzida pela <span style="color:#F6F1EE">Dra. Bianca</span> e pela <span style="color:#F6F1EE">Dra. Bruna Findikoglu</span>, médicas pós-graduadas em endocrinologia. Seis etapas que unem diagnóstico aprofundado, medicação individualizada, bioimpedância e escuta, do primeiro exame ao acompanhamento de longo prazo.</p>
 
       <div style="margin-top:clamp(34px,4.5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2px;border-radius:16px;overflow:hidden;border:1px solid rgba(112,169,140,.18)">
         <div data-reveal="1" style="aspect-ratio:3/4;overflow:hidden"><img src="assets/stock/recepcao.jpg" alt="Recepção da clínica" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
@@ -292,7 +292,7 @@
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#CBDBD3">Tempo 2 · 3 meses</span>
           </div>
           <h3 style="margin:16px 0 0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:23px;line-height:1.15;color:#F6F1EE">Regulação</h3>
-          <p style="margin:10px 0 0;font-size:14.5px;line-height:1.65;color:#B3C6BE">Protocolo individualizado por escrito, <span style="color:#EFE8E3">medicação personalizada</span> e ajuste de dose a cada retorno — com leitura objetiva do que mudou no exame e no corpo.</p>
+          <p style="margin:10px 0 0;font-size:14.5px;line-height:1.65;color:#B3C6BE">Protocolo individualizado por escrito, <span style="color:#EFE8E3">medicação personalizada</span> e ajuste de dose a cada retorno, com leitura objetiva do que mudou no exame e no corpo.</p>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:16px;border:1px solid rgba(112,169,140,.20);background:#16352F;padding:18px 18px 26px">
           <div style="border-radius:10px;overflow:hidden;aspect-ratio:16/10;overflow:hidden"><img src="assets/stock/etapa-acompanhamento.jpg" alt="Acompanhamento contínuo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
@@ -301,7 +301,7 @@
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#CBDBD3">Tempo 3 · 12 meses</span>
           </div>
           <h3 style="margin:16px 0 0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:23px;line-height:1.15;color:#F6F1EE">Longevidade</h3>
-          <p style="margin:10px 0 0;font-size:14.5px;line-height:1.65;color:#B3C6BE">Manutenção do equilíbrio, composição corporal acompanhada e <span style="color:#EFE8E3">plano para os próximos anos</span> — porque hormônio regulado se sustenta com rotina, não com ciclo fechado.</p>
+          <p style="margin:10px 0 0;font-size:14.5px;line-height:1.65;color:#B3C6BE">Manutenção do equilíbrio, composição corporal acompanhada e <span style="color:#EFE8E3">plano para os próximos anos</span>, porque hormônio regulado se sustenta com rotina, não com ciclo fechado.</p>
         </div>
       </div>
 
@@ -376,7 +376,7 @@
         <div style="position:absolute;right:22px;bottom:22px;width:24px;height:24px;border-right:1px solid rgba(112,169,140,.5);border-bottom:1px solid rgba(112,169,140,.5)"></div>
         <h2 data-split="1" style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:clamp(26px,3.8vw,46px);line-height:1.08;color:#F6F1EE">AGENDA CONDUZIDA</h2>
         <p data-reveal="1" style="margin:20px auto 0;max-width:52ch;font-size:16.5px;line-height:1.7;color:#D4E0DA"><span style="color:#F6F1EE;font-weight:400">Não atendemos em volume.</span> Consulta longa exige agenda curta.</p>
-        <p data-reveal="1" style="margin:18px auto 0;max-width:62ch;font-size:15px;line-height:1.75;color:#A8BCB4">Cada paciente do Protocolo RAINHA passa por uma <span style="color:#EFE8E3">triagem inicial</span> para entender o quadro, o histórico de exames e o momento de vida — é o que garante escuta de verdade e acompanhamento próximo do começo ao fim.</p>
+        <p data-reveal="1" style="margin:18px auto 0;max-width:62ch;font-size:15px;line-height:1.75;color:#A8BCB4">Cada paciente do Protocolo RAINHA passa por uma <span style="color:#EFE8E3">triagem inicial</span> para entender o quadro, o histórico de exames e o momento de vida. É o que garante escuta de verdade e acompanhamento próximo do começo ao fim.</p>
         <div style="width:1px;height:56px;margin:26px auto;background:linear-gradient(#70A98C,transparent)"></div>
         <p data-reveal="1" style="margin:0 auto;max-width:62ch;font-size:15px;line-height:1.75;color:#A8BCB4">Se o seu caso não for para a nossa abordagem, dizemos isso na triagem e indicamos o caminho mais adequado. <span style="color:#EFE8E3">Honestidade clínica antes de agenda cheia.</span></p>
       </div>
@@ -441,7 +441,7 @@
     <div class="ayah-wrap" style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(20px,3.8vw,44px)">
       <div style="text-align:center">
         <h2 data-split="1" style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:clamp(28px,4.4vw,54px);line-height:1.04;letter-spacing:-.02em;color:#F6F1EE">O QUE INVESTIGAMOS</h2>
-        <p data-reveal="1" style="margin:18px auto 0;max-width:56ch;font-size:16px;line-height:1.65;color:#A8BCB4">Oito frentes analisadas em conjunto — porque nenhum hormônio trabalha sozinho.</p>
+        <p data-reveal="1" style="margin:18px auto 0;max-width:56ch;font-size:16px;line-height:1.65;color:#A8BCB4">Oito frentes analisadas em conjunto, porque nenhum hormônio trabalha sozinho.</p>
       </div>
       <div style="margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(14px,1.6vw,20px)">
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
@@ -469,7 +469,7 @@
           <div style="flex:1;min-height:150px;overflow:hidden"><img src="assets/stock/inv-cortisol.jpg" alt="Cortisol e estresse" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div style="padding:20px">
             <h3 style="margin:0;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:21px;line-height:1.15;color:#F6F1EE">Cortisol e estresse</h3>
-            <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">O eixo que sustenta — ou sabota — sono, humor e gordura abdominal.</p>
+            <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#A8BCB4">O eixo que sustenta (ou sabota) sono, humor e gordura abdominal.</p>
           </div>
         </div>
         <div data-reveal="1" data-lift="1" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(112,169,140,.20);background:#0B241F;min-height:310px;display:flex;flex-direction:column">
@@ -636,7 +636,7 @@
           <div style="display:flex;flex-direction:column;gap:13px;margin-top:22px">
             <p style="margin:0;display:flex;gap:11px;font-size:14.5px;line-height:1.6;color:#40564C"><span style="color:#40775C">✓</span><span>Duas endocrinologistas conduzindo o mesmo caso, juntas</span></p>
             <p style="margin:0;display:flex;gap:11px;font-size:14.5px;line-height:1.6;color:#40564C"><span style="color:#40775C">✓</span><span>Metodologia RAINHA em seis etapas nomeadas</span></p>
-            <p style="margin:0;display:flex;gap:11px;font-size:14.5px;line-height:1.6;color:#40564C"><span style="color:#40775C">✓</span><span>Agenda curta, por decisão clínica — consulta longa de verdade</span></p>
+            <p style="margin:0;display:flex;gap:11px;font-size:14.5px;line-height:1.6;color:#40564C"><span style="color:#40775C">✓</span><span>Agenda curta, por decisão clínica: consulta longa de verdade</span></p>
             <p style="margin:0;display:flex;gap:11px;font-size:14.5px;line-height:1.6;color:#40564C"><span style="color:#40775C">✓</span><span>Acesso ao Protocolo Beleza Pura, exclusivo para pacientes Ayah</span></p>
           </div>
           <p style="margin:24px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6B7C74;line-height:1.8">Dra. Bianca CRM 215813<br>Dra. Bruna Findikoglu CRM 215815</p>
@@ -660,7 +660,7 @@
           <p style="margin:0;display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(112,169,140,.16);font-size:15px;color:#C9D6D1"><span>Protocolo individualizado por escrito</span><span style="color:#EEBD2B;font-family:'IBM Plex Mono',monospace;font-size:12.5px;white-space:nowrap">6 etapas</span></p>
           <p style="margin:0;display:flex;justify-content:space-between;gap:16px;font-size:15px;color:#C9D6D1"><span>Acompanhamento e ajuste de dose</span><span style="color:#EEBD2B;font-family:'IBM Plex Mono',monospace;font-size:12.5px;white-space:nowrap">12 meses</span></p>
         </div>
-        <p data-reveal="1" style="margin:clamp(26px,3.4vw,38px) auto 0;max-width:62ch;font-size:15.5px;line-height:1.75;color:#C9D6D1">O valor da consulta e do acompanhamento é informado <span style="color:#F6F1EE">na triagem, antes de qualquer agendamento</span> — sem taxa surpresa e sem pacote fechado que você não pediu.</p>
+        <p data-reveal="1" style="margin:clamp(26px,3.4vw,38px) auto 0;max-width:62ch;font-size:15.5px;line-height:1.75;color:#C9D6D1">O valor da consulta e do acompanhamento é informado <span style="color:#F6F1EE">na triagem, antes de qualquer agendamento</span>, sem taxa surpresa e sem pacote fechado que você não pediu.</p>
         <div data-reveal="1" style="display:flex;justify-content:center;margin-top:clamp(26px,3.4vw,38px)">
           <a href="{{ whatsapp }}" data-magnet="1" style="display:inline-flex;align-items:center;gap:4px;padding:7px;border:1px solid rgba(112,169,140,.28);border-radius:999px;background:rgba(246,241,238,.06);text-decoration:none">
             <span style="display:inline-block;padding:15px 27px;border-radius:999px;background:#F6F1EE;color:#012C28;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase">Quero agendar minha consulta</span>
@@ -702,7 +702,7 @@
         </div>
         <div>
           <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#70A98C">Responsáveis técnicas</p>
-          <p style="margin:14px 0 0;font-size:14.5px;font-weight:400;line-height:1.8;color:#C9D6D1">Dra. Bianca — CRM 215813<br>Dra. Bruna Findikoglu — CRM 215815</p>
+          <p style="margin:14px 0 0;font-size:14.5px;font-weight:400;line-height:1.8;color:#C9D6D1">Dra. Bianca · CRM 215813<br>Dra. Bruna Findikoglu · CRM 215815</p>
         </div>
         <div>
           <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#70A98C">Contato</p>
@@ -729,13 +729,13 @@ class Component extends DCLogic {
   state = { open: {} };
 
   faqData = [
-    { q: "Preciso já ter exames em mãos para agendar?", a: "Não. Se você já tem exames recentes, traga — eles entram na leitura. Se não tem, o painel é solicitado na primeira consulta, definido caso a caso pelas médicas responsáveis." },
+    { q: "Preciso já ter exames em mãos para agendar?", a: "Não. Se você já tem exames recentes, traga: eles entram na leitura. Se não tem, o painel é solicitado na primeira consulta, definido caso a caso pelas médicas responsáveis." },
     { q: "A consulta é com as duas médicas juntas?", a: "Sim. O Protocolo RAINHA foi desenhado para ser conduzido a quatro mãos: a Dra. Bianca lidera a investigação diagnóstica e a Dra. Bruna a condução terapêutica e o acompanhamento." },
-    { q: "Em quanto tempo eu sinto diferença?", a: "Depende do seu quadro, do eixo envolvido e da adesão ao protocolo. A maioria dos ajustes hormonais precisa de semanas a meses para se estabilizar — é por isso que o acompanhamento tem retorno programado, e não alta imediata." },
+    { q: "Em quanto tempo eu sinto diferença?", a: "Depende do seu quadro, do eixo envolvido e da adesão ao protocolo. A maioria dos ajustes hormonais precisa de semanas a meses para se estabilizar. É por isso que o acompanhamento tem retorno programado, e não alta imediata." },
     { q: "Vocês prescrevem medicação manipulada?", a: "Quando há indicação clínica, sim: o tratamento é individualizado e pode incluir medicação personalizada. Nada é prescrito sem avaliação e sem leitura dos seus exames." },
-    { q: "Isso é uma dieta ou um programa de emagrecimento?", a: "Não. O foco é regulação hormonal, composição corporal e longevidade. Quando o peso muda, é consequência do equilíbrio recuperado — não a promessa central." },
+    { q: "Isso é uma dieta ou um programa de emagrecimento?", a: "Não. O foco é regulação hormonal, composição corporal e longevidade. Quando o peso muda, é consequência do equilíbrio recuperado, não a promessa central." },
     { q: "Atendem por convênio?", a: "O atendimento é particular. Valores de consulta e de acompanhamento são informados na triagem, antes de qualquer agendamento, e você recebe recibo para solicitar reembolso ao seu plano." },
-    { q: "E se o meu caso não for para o Protocolo RAINHA?", a: "Dizemos isso na triagem e indicamos o caminho mais adequado. O protocolo é para mulheres que buscam investigação hormonal aprofundada e acompanhamento contínuo — não para todos os quadros." }
+    { q: "E se o meu caso não for para o Protocolo RAINHA?", a: "Dizemos isso na triagem e indicamos o caminho mais adequado. O protocolo é para mulheres que buscam investigação hormonal aprofundada e acompanhamento contínuo, não para todos os quadros." }
   ];
 
   renderVals() {
@@ -842,13 +842,19 @@ class Component extends DCLogic {
   installReveal(k) {
     document.querySelectorAll("[data-reveal]").forEach(el => {
       el.style.opacity = "0";
+      // itens irmaos entram em cascata, nao todos no mesmo instante: e o que
+      // faz uma grade de cards parecer animada em vez de so aparecer
+      const irmaos = el.parentElement
+        ? [].filter.call(el.parentElement.children, n => n.hasAttribute && n.hasAttribute("data-reveal"))
+        : [el];
+      const atraso = Math.min(irmaos.indexOf(el) * 90, 450) * k;
       this.onEnter(el, () => {
         el.animate(
           [
             { opacity: 0, transform: "translateY(" + (30 * k).toFixed(1) + "px)" },
             { opacity: 1, transform: "none" }
           ],
-          { duration: 900 * k, easing: "cubic-bezier(.22,1,.36,1)", fill: "both" }
+          { duration: 900 * k, delay: atraso, easing: "cubic-bezier(.22,1,.36,1)", fill: "both" }
         );
         el.style.opacity = "";
       });
