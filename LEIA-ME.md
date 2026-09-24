@@ -138,9 +138,18 @@ Marcado por atributo no HTML, sem tocar em JS:
 O pai precisa de `position:relative`. Atributos: `data-gradual-blur`
 (top/bottom/left/right), `data-height`, `data-strength`, `data-divs`,
 `data-curve` (linear/bezier/ease-in/ease-out/ease-in-out), `data-exponential`,
-`data-opacity`, `data-z`. Esta aplicado em 4 lugares: base do heroi, as duas
-marquises e o carrossel de depoimentos — as pontas dissolvem em vez de cortar
-seco. Um `MutationObserver` monta overlays que apareçam depois.
+`data-opacity`, `data-z`. Com `data-target="page"` o overlay vira `position:fixed` e acompanha a
+viewport — e o preset `page-footer` do componente original.
+
+**Esta aplicado em um lugar so:** uma faixa fixa na base da janela, declarada
+logo depois da div do grao, no topo do documento (fora de qualquer secao, para
+nenhum `overflow` recortar). O conteudo entra em desfoque ao descer para o
+rodape da tela, em qualquer secao.
+
+O rodape ganhou `padding-bottom` extra por causa disso: sem a folga, o aviso
+legal ficaria permanentemente borrado sob a faixa.
+
+Um `MutationObserver` monta overlays que aparecam depois da carga.
 
 ### SplashCursor
 

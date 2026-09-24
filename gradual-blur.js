@@ -39,11 +39,12 @@
     var opacity = parseFloat(el.getAttribute('data-opacity') || '1');
     var size = el.getAttribute('data-height') || '6rem';
     var vertical = position === 'top' || position === 'bottom';
+    var isPage = el.getAttribute('data-target') === 'page';
 
     el.className = (el.className ? el.className + ' ' : '') + 'gradual-blur';
-    el.style.position = 'absolute';
+    el.style.position = isPage ? 'fixed' : 'absolute';
     el.style.pointerEvents = 'none';
-    el.style.zIndex = el.getAttribute('data-z') || '5';
+    el.style.zIndex = el.getAttribute('data-z') || (isPage ? '75' : '5');
     el.style[position] = '0';
     if (vertical) {
       el.style.left = '0'; el.style.right = '0';
@@ -99,6 +100,23 @@
       return 0;
     }
     Array.prototype.forEach.call(nodes, build);
+    observar();
     return nodes.length;
   };
+
+  // overlays inseridos depois da carga tambem se montam sozinhos
+  var observando = false;
+  function observar() {
+    if (observando || typeof MutationObserver === 'undefined') return;
+    observando = true;
+    new MutationObserver(function (muts) {
+      muts.forEach(function (m) {
+        Array.prototype.forEach.call(m.addedNodes, function (n) {
+          if (n.nodeType !== 1) return;
+          if (n.hasAttribute && n.hasAttribute('data-gradual-blur')) build(n);
+          if (n.querySelectorAll) Array.prototype.forEach.call(n.querySelectorAll('[data-gradual-blur]'), build);
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  }
 })();
