@@ -119,6 +119,41 @@ enquanto o site está em adaptação. Ao colocar os prints reais, remova o
 `<span>` do selo. Os 5 cards aparecem duas vezes porque o carrossel duplica o
 bloco para o loop ficar contínuo: as duas voltas têm de usar as mesmas imagens.
 
+## Efeitos do React Bits (`gradual-blur.js` e `splash-cursor.js`)
+
+Dois componentes do [React Bits](https://reactbits.dev) portados para JS puro —
+esta pagina nao e um app React (o `support.js` monta um componente so), entao
+JSX, hooks e `import` nao teriam onde rodar. A logica dos dois e a mesma do
+original; o que mudou foi a casca.
+
+### GradualBlur
+
+Marcado por atributo no HTML, sem tocar em JS:
+
+```html
+<div data-gradual-blur="bottom" data-height="5rem"
+     data-strength="2.2" data-divs="6" data-curve="bezier" data-exponential="1"></div>
+```
+
+O pai precisa de `position:relative`. Atributos: `data-gradual-blur`
+(top/bottom/left/right), `data-height`, `data-strength`, `data-divs`,
+`data-curve` (linear/bezier/ease-in/ease-out/ease-in-out), `data-exponential`,
+`data-opacity`, `data-z`. Esta aplicado em 4 lugares: base do heroi, as duas
+marquises e o carrossel de depoimentos — as pontas dissolvem em vez de cortar
+seco. Um `MutationObserver` monta overlays que apareçam depois.
+
+### SplashCursor
+
+Simulacao de fluido em WebGL que segue o cursor. Ligado em
+`componentDidMount → installSplashCursor()`, com a paleta da marca no lugar do
+arco-iris do original. Nao instala em tela de toque nem abaixo de 1024px (e um
+efeito de cursor, e a simulacao custa GPU), e pausa com a aba em segundo plano.
+Como `installSplashCursor` roda depois do `if (reduce) return`, quem pediu
+`prefers-reduced-motion` nao recebe o efeito.
+
+Ajustes ficam no objeto passado em `installSplashCursor`: `INTENSITY` (brilho),
+`CURL` (redemoinho), `SPLAT_RADIUS`, `DENSITY_DISSIPATION` (quanto o rastro dura).
+
 ## Antes de publicar
 
 - Trocar `https://wa.me/5500000000000` pelo número real (aparece 5x).

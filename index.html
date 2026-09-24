@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<script src="./gradual-blur.js"></script>
+<script src="./splash-cursor.js"></script>
 </head>
 <body>
 <x-dc>
@@ -28,6 +30,14 @@
   @keyframes ayahShimmer { from { background-position: -220% 0 } to { background-position: 220% 0 } }
 
   img, svg, video { max-width: 100%; }
+
+  /* GradualBlur — camadas empilhadas de backdrop-filter com mascara */
+  .gradual-blur { isolation: isolate; pointer-events: none; }
+  .gradual-blur-inner { position: relative; width: 100%; height: 100%; pointer-events: none; }
+  .gradual-blur-inner > div { position: absolute; inset: 0; }
+
+  /* SplashCursor fica abaixo do grao (80) e da barra de progresso (90) */
+  [data-splash-cursor] { mix-blend-mode: screen; }
 
   /* quanto a foto do heroi desce para alem da base do header.
      Foto e degrade do chao usam o mesmo valor. */
@@ -147,9 +157,13 @@
         </div>
       </div>
     </div>
+
+    <div data-gradual-blur="bottom" data-height="clamp(56px,6vw,84px)" data-strength="2.2" data-divs="6" data-curve="bezier" data-exponential="1" data-z="3"></div>
   </header>
 
   <div style="position:relative;height:clamp(120px,15vw,190px);background:#031A17">
+    <div data-gradual-blur="left" data-height="clamp(60px,10vw,150px)" data-strength="2.6" data-divs="6" data-curve="bezier"></div>
+    <div data-gradual-blur="right" data-height="clamp(60px,10vw,150px)" data-strength="2.6" data-divs="6" data-curve="bezier"></div>
     <div style="position:absolute;left:-6%;right:-6%;top:18%;transform:rotate(-2.4deg);background:#0E2B25;border-top:1px solid rgba(112,169,140,.20);border-bottom:1px solid rgba(112,169,140,.20);overflow:hidden">
       <div style="display:flex;width:max-content;animation:ayahMarq 34s linear infinite">
         <div style="display:flex;align-items:center;gap:38px;padding:16px 19px;font-family:'Bodoni Moda',Didot,serif;font-size:clamp(17px,2vw,26px);letter-spacing:.04em;color:#D4E0DA;white-space:nowrap">
@@ -410,7 +424,9 @@
   </section>
 
   <div style="background:#F6F1EE;padding-bottom:clamp(20px,3vw,40px)">
-    <div style="background:#012C28;overflow:hidden">
+    <div style="position:relative;background:#012C28;overflow:hidden">
+      <div data-gradual-blur="left" data-height="clamp(50px,8vw,120px)" data-strength="2.4" data-divs="5" data-curve="bezier"></div>
+      <div data-gradual-blur="right" data-height="clamp(50px,8vw,120px)" data-strength="2.4" data-divs="5" data-curve="bezier"></div>
       <div style="display:flex;width:max-content;animation:ayahMarq 40s linear infinite">
         <div style="display:flex;align-items:center;gap:34px;padding:14px 17px;font-family:'Bodoni Moda',Didot,serif;font-size:clamp(15px,1.7vw,22px);color:#D4E0DA;white-space:nowrap">
           <span>CRM 215813</span><span style="color:#70A98C">◯</span><span>CRM 215815</span><span style="color:#70A98C">◯</span><span>ENDOCRINOLOGIA INTEGRATIVA</span><span style="color:#70A98C">◯</span><span>CRM 215813</span><span style="color:#70A98C">◯</span><span>CRM 215815</span><span style="color:#70A98C">◯</span><span>ENDOCRINOLOGIA INTEGRATIVA</span><span style="color:#70A98C">◯</span>
@@ -524,7 +540,9 @@
     </div>
 
     <sc-if value="{{ mostrarPrints }}" hint-placeholder-val="{{ true }}">
-      <div style="margin-top:clamp(40px,5vw,70px);border-top:1px solid #D8D0CA;border-bottom:1px solid #D8D0CA;padding:clamp(30px,4vw,50px) 0;overflow:hidden">
+      <div style="position:relative;margin-top:clamp(40px,5vw,70px);border-top:1px solid #D8D0CA;border-bottom:1px solid #D8D0CA;padding:clamp(30px,4vw,50px) 0;overflow:hidden">
+        <div data-gradual-blur="left" data-height="clamp(44px,7vw,110px)" data-strength="2.2" data-divs="5" data-curve="bezier"></div>
+        <div data-gradual-blur="right" data-height="clamp(44px,7vw,110px)" data-strength="2.2" data-divs="5" data-curve="bezier"></div>
         <p style="margin:0 0 24px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#6B7C74">Depoimentos recebidos no direct</p>
         <div style="display:flex;width:max-content;gap:16px;animation:ayahMarq 58s linear infinite">
           <div style="display:flex;gap:16px">
@@ -746,6 +764,8 @@ class Component extends DCLogic {
 
   componentDidMount() {
     const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // o blur nao e movimento: entra mesmo com prefers-reduced-motion
+    if (window.ayahGradualBlur) window.ayahGradualBlur();
     const k = this.motion();
     const grain = document.querySelector("[data-grain]");
     if (grain && this.props.graoFilme === false) grain.style.display = "none";
@@ -757,6 +777,22 @@ class Component extends DCLogic {
     this.installLift();
     this.installParallax();
     this.installProgress();
+    this.installSplashCursor();
+  }
+
+  installSplashCursor() {
+    if (!window.ayahSplashCursor || this._splashOff) return;
+    // e um efeito de cursor: em tela de toque nao ha cursor, e a simulacao
+    // custa GPU e bateria a toa
+    const fine = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
+    if (!fine || window.innerWidth < 1024) return;
+    this._splashOff = window.ayahSplashCursor({
+      PALETTE: ["#70A98C", "#A9C7B6", "#EEBD2B"],
+      INTENSITY: 0.17,
+      CURL: 2.4,
+      SPLAT_RADIUS: 0.18,
+      DENSITY_DISSIPATION: 4.2
+    });
   }
 
   splitHeadings(k) {
