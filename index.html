@@ -81,13 +81,21 @@
     .ayah-wrap { padding-left: 16px !important; padding-right: 16px !important; }
   }
 
-  /* quem pediu menos movimento, recebe menos movimento */
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: .001ms !important;
-                             animation-iteration-count: 1 !important;
-                             transition-duration: .001ms !important; }
-  }
+  /* DECISAO DO CLIENTE: o site anima sempre, mesmo para quem pediu menos
+     movimento no sistema. Havia aqui um bloco @media (prefers-reduced-motion:
+     reduce) que zerava todas as animacoes, e um early return no
+     componentDidMount que desligava reveal, parallax, cursor e afins.
+
+     Para devolver o comportamento acessivel, basta restaurar os dois:
+
+       @media (prefers-reduced-motion: reduce) {
+         html { scroll-behavior: auto; }
+         *, *::before, *::after { animation-duration: .001ms !important;
+                                  animation-iteration-count: 1 !important;
+                                  transition-duration: .001ms !important; }
+       }
+
+     e o "if (reduce) return;" no componentDidMount. */
 </style>
 </helmet>
 
@@ -759,13 +767,12 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
-    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    // o blur nao e movimento: entra mesmo com prefers-reduced-motion
     if (window.ayahGradualBlur) window.ayahGradualBlur();
     const k = this.motion();
     const grain = document.querySelector("[data-grain]");
     if (grain && this.props.graoFilme === false) grain.style.display = "none";
-    if (reduce) return;
+    // sem checagem de prefers-reduced-motion por decisao do cliente: ver a
+    // nota no <style> do <helmet> para restaurar
 
     this.splitHeadings(k);
     this.installReveal(k);

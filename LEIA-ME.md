@@ -57,7 +57,7 @@ Pontos de quebra:
   Acima disso a foto ficava por cima do título e do CRM.
 - **≤ 620px** — nav e selo encolhem.
 - **≤ 400px** — padding lateral cai para 16px.
-- `prefers-reduced-motion` desliga as animações.
+- `prefers-reduced-motion` **não** desliga as animações (ver abaixo).
 
 Os demais grids já são `repeat(auto-fit,minmax(...,1fr))` e se reorganizam
 sozinhos — mexer no `minmax` muda quantas colunas cabem.
@@ -157,11 +157,28 @@ Simulacao de fluido em WebGL que segue o cursor. Ligado em
 `componentDidMount → installSplashCursor()`, com a paleta da marca no lugar do
 arco-iris do original. Nao instala em tela de toque nem abaixo de 1024px (e um
 efeito de cursor, e a simulacao custa GPU), e pausa com a aba em segundo plano.
-Como `installSplashCursor` roda depois do `if (reduce) return`, quem pediu
-`prefers-reduced-motion` nao recebe o efeito.
+O efeito roda para todo mundo (ver a secao abaixo sobre movimento).
 
 Ajustes ficam no objeto passado em `installSplashCursor`: `INTENSITY` (brilho),
 `CURL` (redemoinho), `SPLAT_RADIUS`, `DENSITY_DISSIPATION` (quanto o rastro dura).
+
+## O site ignora `prefers-reduced-motion`
+
+Por decisao do cliente, as animacoes rodam sempre, inclusive para quem
+desligou "efeitos de animacao" no sistema operacional. Nao e o padrao da web:
+essa preferencia existe porque movimento na tela provoca enjoo e tontura em
+quem tem sensibilidade vestibular ou enxaqueca vestibular.
+
+Havia dois freios, e os dois sairam:
+
+1. um bloco `@media (prefers-reduced-motion: reduce)` no `<style>` do
+   `<helmet>`, que zerava a duracao de toda animacao e transicao;
+2. um `if (reduce) return;` no `componentDidMount`, que pulava
+   `splitHeadings`, `installReveal`, `installMagnet`, `installLift`,
+   `installParallax`, `installProgress` e `installSplashCursor`.
+
+O codigo para restaurar os dois esta comentado no proprio `<style>`, logo
+onde o bloco ficava.
 
 ## Antes de publicar
 
